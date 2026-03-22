@@ -144,6 +144,9 @@ h1 {
 </style>
 </head>
 <body>
+    <audio id="musica" loop>
+  <source src="tiroteo.mp3" type="audio/mpeg">
+</audio>
 <div class="fondo" id="fondo"></div>
 <div class="container">
 <img class="decor-flor flor1" src="images/flores.png">
@@ -242,6 +245,9 @@ for (let i = 0; i < 25; i++) {
     flor.style.width = (25 + Math.random() * 35) + "px";
     fondo.appendChild(flor);
 }
+document.addEventListener('click', function() {
+    document.getElementById('musica').play();
+  }, { once: true });
 </script>
 </body>
 </html>
